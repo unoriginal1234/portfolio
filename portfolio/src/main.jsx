@@ -10,6 +10,7 @@ import ErrorPage from "./error-page";
 import Contact from "./routes/contact";
 import Projects from "./routes/projects";
 import About from "./routes/about";
+import Index from "./routes/index";
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
+      {index: true, element: <Index />},
       {
         path: "contact",
         element: <Contact />
