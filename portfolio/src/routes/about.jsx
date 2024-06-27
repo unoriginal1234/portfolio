@@ -4,7 +4,7 @@ export default function About() {
 
   return (
     <>
-      <div>
+      <div className="container">
        {ABOUT_ARRAY.map((paragraph, index) => {
           return (<>
             <p key={index}>

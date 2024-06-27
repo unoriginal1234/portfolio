@@ -1,16 +1,20 @@
 const PROJECTS_ARRAY = [
   {
     title: 'Headliners',
-    description: 'Description for Headliners'
+    description: 'Description for Headliners',
+    image: '../../public/images/Headliner.png'
   },
   {
     title: 'Manor Match',
-    description: 'Description for Manor Match'
+    description: 'Description for Manor Match',
+    image: '../../public/images/ManorMatch.png'
   },
   {
-    title: 'Atelier eCommerce',
-    description: 'Description for Atelier'
-  }
+    title: 'Atelier',
+    description: 'Description for Atelier',
+    image: '../../public/images/ProjectAtelier.png',
+  },
+
 ]
 
 export default PROJECTS_ARRAY
