@@ -15,12 +15,12 @@ export default function Index() {
         <div className="container"></div>
       </div>
       <h2 className="container">Projects</h2>
-      <div className="container is-flex is-align-items-start" style={{'gap': '10px'}}>
+      <div className="container grid is-col-min-12" >
         {
           PROJECTS_ARRAY.map((project, index) => {
             return (
-              <Link key={index} to='/projects'>
-                <ProjectCard  project={project}/>
+              <Link className="cell" key={index} to='/projects'>
+                <ProjectCard   project={project}/>
               </Link>
             )
           })

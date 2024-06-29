@@ -4,9 +4,9 @@ export default function About() {
 
   return (
     <>
-      <div className="container">
+      <div className="container box">
        {ABOUT_ARRAY.map((paragraph, index) => {
-          return (<div key={index}>
+          return (<div className="content" key={index}>
             <p >
               {paragraph}
             </p>

@@ -6,11 +6,11 @@ export default function Projects() {
 
   return (
     <div className="container">
-      <div >
+      <div>
         {
           PROJECTS_ARRAY.map((project, index) => {
             return (
-              <div key={index} className="grid">
+              <div  key={index} >
                 <ProjectDetail project={project} />
               </div>
 
@@ -18,6 +18,7 @@ export default function Projects() {
           })
         }
       </div>
+      <br></br>
     </div>
   )
 }
