@@ -1,16 +1,18 @@
 import PROJECTS_ARRAY from '../content/projects.js'
-import ProjectCard from '../components/projectCard'
+import ProjectDetail from '../components/projectDetail'
+
 
 export default function Projects() {
+
   return (
     <div className="container">
-      <div className="grid">
+      <div >
         {
           PROJECTS_ARRAY.map((project, index) => {
             return (
-              <>
-              <ProjectCard key={index} project={project} />
-              </>
+              <div key={index} className="grid">
+                <ProjectDetail project={project} />
+              </div>
 
             )
           })

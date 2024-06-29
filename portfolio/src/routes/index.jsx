@@ -14,13 +14,13 @@ export default function Index() {
         <HeadshotCard />
         <div className="container"></div>
       </div>
-      <h2 className="">Projects</h2>
+      <h2 className="container">Projects</h2>
       <div className="container is-flex is-align-items-start" style={{'gap': '10px'}}>
         {
           PROJECTS_ARRAY.map((project, index) => {
             return (
               <Link key={index} to='/projects'>
-              <ProjectCard  project={project}/>
+                <ProjectCard  project={project}/>
               </Link>
             )
           })

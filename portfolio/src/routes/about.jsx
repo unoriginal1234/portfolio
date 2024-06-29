@@ -6,12 +6,12 @@ export default function About() {
     <>
       <div className="container">
        {ABOUT_ARRAY.map((paragraph, index) => {
-          return (<>
-            <p key={index}>
+          return (<div key={index}>
+            <p >
               {paragraph}
             </p>
             <br></br>
-          </>
+          </div>
             )
        })}
       </div>

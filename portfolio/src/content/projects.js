@@ -1,18 +1,22 @@
 const PROJECTS_ARRAY = [
   {
     title: 'Headliners',
-    description: 'Description for Headliners',
-    image: '../../public/images/Headliner.png'
+    description: "Daily music trivia game using Spotify's API",
+    image: 'images/Headliner.png',
+    gif: 'gifs/Headliners.gif',
+    url: 'https://www.playheadliners.com'
   },
   {
     title: 'Manor Match',
-    description: 'Description for Manor Match',
-    image: '../../public/images/ManorMatch.png'
+    description: 'A web-based service that connects homeowners with professionals for upscale home management and maintenance',
+    image: 'images/ManorMatch.png',
+    gif: 'gifs/ManorMatch.gif',
   },
   {
     title: 'Atelier',
-    description: 'Description for Atelier',
-    image: '../../public/images/ProjectAtelier.png',
+    description: 'Gorgeous, easy-to-use, e-commerce site for customers to make informed purchasing decisions',
+    image: 'images/ProjectAtelier.png',
+    gif: 'gifs/Atelier.gif'
   },
 
 ]
