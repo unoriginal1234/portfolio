@@ -8,25 +8,38 @@ export default function Index() {
 
 
   return (
-    <div className="container">
-      <div className="is-flex">
-        <div className="container"></div>
+
+    <div >
+      <div className="container grid is-col-min-12">
         <HeadshotCard />
-        <div className="container"></div>
+        <section className="container is-max-desktop">
+        <section className="section">
+
+            <p className="title">Say hey!</p>
+
+        </section>
+
+        <ContactForm />
+        </section>
       </div>
-      <h2 className="container">Projects</h2>
-      <div className="container grid is-col-min-12" >
-        {
-          PROJECTS_ARRAY.map((project, index) => {
-            return (
-              <Link className="cell" key={index} to='/projects'>
-                <ProjectCard   project={project}/>
-              </Link>
-            )
-          })
-        }
-      </div>
-      <ContactForm />
+
+      <section className="container">
+        <h2 className="title">Projects</h2>
+        <div className="container grid is-col-min-12" >
+          {
+            PROJECTS_ARRAY.map((project, index) => {
+              return (
+                <Link className="cell" key={index} to='/projects'>
+                  <ProjectCard project={project}/>
+                </Link>
+              )
+            })
+          }
+        </div>
+      </section>
+
+
+
     </div>
 
   );

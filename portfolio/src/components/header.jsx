@@ -1,9 +1,9 @@
 export default function Header(){
   return (
     <>
-      <h1>
-        Eric T. Roth - Developer
-      </h1>
+      <div className="hero is-primary">
+        Eric T. Roth - Software Engineer
+      </div>
     </>
   )
 }
