@@ -44,12 +44,12 @@ const Trail = ({ open, children }) => {
 export default function AboutAnimation() {
   const [open, set] = useState(true);
   return (
-    <div className={animationContainer, 'title has-text-centered'} onClick={() => set(state => !state)}>
+    <div className={animationContainer, 'is-size-1 has-text-centered is-italic has-text-weight-bold'} onClick={() => set(state => !state)}>
       <Trail open={open}>
         <span></span>
-        <span>Creative</span>
-        <span>and</span>
-        <span>Smart</span>
+        <span>About</span>
+        <span>Eric</span>
+        <span>Roth</span>
       </Trail>
     </div>
   );

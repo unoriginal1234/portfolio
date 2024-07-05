@@ -10,7 +10,7 @@ export default function NavbarRoutes () {
         Contact
       </Link>
       <hr className="navbar-divider" />
-      <a className="navbar-item">
+      <a className="navbar-item" href="EricRothResume.pdf" target="_blank">
         Resume
       </a>
     </>)

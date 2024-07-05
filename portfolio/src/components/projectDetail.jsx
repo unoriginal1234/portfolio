@@ -6,8 +6,11 @@ export default function ProjectDetail({project}) {
 
   return (
     <div className="grid is-col-min-12" style={{"margin": "3%"}}>
-      <div className="cell ">
-        {isGif ? <figure className="image "><img src={project.gif}/></figure> : <figure className="image is-square"><img  src={project.image}/></figure>}
+
+        <div className="cell">
+          {isGif ? <figure className="image "><img src={project.gif}/></figure> : <figure className="image is-square"><img  src={project.image}/></figure>}
+
+
       </div>
 
       <div className="cell content box">
