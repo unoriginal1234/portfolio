@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function ProjectCard () {
   return (
     <>
-      <div className="card" style={{"maxWidth": "500px"}}>
+      <div className="card" >
         <div className="card-image">
           <figure className="image" >
             <img

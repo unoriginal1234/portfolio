@@ -36,34 +36,39 @@ export default function ContactForm () {
         setIsLoading(false)
       })
       .catch((error) =>{
-        console.log(error)
+        console.log('Sorry that came back with an error. ', error)
         setIsLoading(false)
       })
   }
 
   return (
+    <>
+    <section className="title">
+      Say hello
+    </section>
     <form >
-      <div className="field is-grouped">
-        <div className="control">
+
+        <div className="control" style={{"maxWidth" : "480px"}}>
             <label className="label">Name:</label>
             <input className="input is-rounded" name="name" placeholder="Eric" value={name}
             onChange={(e)=> setName(e.target.value)}/>
             { isWarning && name.length === 0 ? <p className="help is-danger">Name is required</p> : ''}
         </div>
 
-        <div className="control">
+        <div className="control" style={{"maxWidth" : "480px"}}>
             <label className="label">Email:</label>
             <input className="input is-rounded" name="email" placeholder="eric@email.com" type="email" value={email}
             onChange={(e)=> setEmail(e.target.value)}/>
             { isWarning && (email.length === 0 || !email.includes('@')) ? <p className="help is-danger">Email is required</p> : ''}
         </div>
-      </div>
+
+
       <div className="field">
         <div className="control">
             <label className="label">Message:</label>
-            <textarea className="textarea" name="message" placeholder="I love your website..." value={message}
+            <textarea className="textarea" name="message" placeholder="I love your website!" value={message}
             onChange={(e)=> setMessage(e.target.value)}/>
-            { isWarning && message.length < 3 ? <p className="help is-danger">Include a longer message or this is a waste of your time as well as mine</p> : ''}
+            { isWarning && message.length < 3 ? <p className="help is-danger">Include a message longer than 3 characters please!</p> : ''}
         </div>
       </div>
 
@@ -74,5 +79,6 @@ export default function ContactForm () {
 
       </div>
     </form>
+    </>
   )
 }
