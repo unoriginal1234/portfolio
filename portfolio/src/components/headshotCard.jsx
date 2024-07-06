@@ -7,7 +7,7 @@ export default function ProjectCard () {
     <>
       <div className="card" >
         <div className="card-image">
-          <figure className="image" >
+          <figure className="image is-2by3" >
             <img
               src={headshot}
               alt="Image of a handsome Software Engineer"

@@ -1,19 +1,6 @@
 import React, { useState } from 'react';
 import { useTrail, a } from '@react-spring/web';
 
-const trailsText = {
-  'position': 'relative',
-  'width': '100%',
-  'height': '80px',
-  'line-height': '80px',
-  'color': 'black',
-  'font-size': '6em',
-  'font-weight': '800',
-  'letter-spacing': '-0.05em',
-  'will-change': 'transform, opacity',
-  'overflow': 'hidden'
-}
-
 const animationContainer = {
   'display': 'flex',
   'align-items': 'center',
@@ -33,7 +20,7 @@ const Trail = ({ open, children }) => {
   return (
     <div>
       {trail.map(({ height, ...style }, index) => (
-        <a.div key={index} className={trailsText} style={style}>
+        <a.div key={index} style={style}>
           <a.div style={{ height }}>{items[index]}</a.div>
         </a.div>
       ))}
@@ -47,9 +34,9 @@ export default function AboutAnimation() {
     <div className={animationContainer, 'is-size-1 has-text-centered is-italic has-text-weight-bold'} onClick={() => set(state => !state)}>
       <Trail open={open}>
         <span></span>
-        <span>About</span>
-        <span>Eric</span>
-        <span>Roth</span>
+        <span>Positive</span>
+        <span>and</span>
+        <span>Upbeat</span>
       </Trail>
     </div>
   );

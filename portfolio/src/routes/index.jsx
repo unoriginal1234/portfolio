@@ -4,6 +4,7 @@ import ContactForm from '../content/ContactForm'
 import HeadshotCard from '../components/headshotCard'
 import ProjectCard from '../components/projectCard'
 import LandingPage from '../components/landingPage'
+import Skills from '../components/skills'
 
 export default function Index() {
 
@@ -19,11 +20,13 @@ export default function Index() {
 
         <div className="section">
           <ContactForm />
+          <div className="section">
+            <Skills />
+          </div>
         </div>
-
       </div>
 
-      <section className="container">
+
 
       <div className="container">
         <h2 className="title has-text-centered	">Projects</h2>
@@ -41,7 +44,7 @@ export default function Index() {
             })
           }
         </div>
-      </section>
+
 
 
 

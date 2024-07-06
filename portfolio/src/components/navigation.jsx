@@ -14,7 +14,7 @@ export default function Navigation() {
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            Eric T. Roth - Developer
+            Eric T. Roth - Software Engineer
           </Link>
 
           <a

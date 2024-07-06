@@ -5,7 +5,7 @@ export default function HeadshotCard ({project}) {
     <>
     <div className="card">
       <div className="card-image">
-        <figure className="image" >
+        <figure className="image is-square" >
           <img
             src={project.image}
             alt={`Image for ${project.title}`}
