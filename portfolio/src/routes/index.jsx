@@ -11,7 +11,7 @@ export default function Index() {
 
   return (
 
-    <div >
+    <div>
       <div className="container grid is-col-min-12" >
         <div className="section">
           <LandingPage />
@@ -26,13 +26,9 @@ export default function Index() {
         </div>
       </div>
 
-
-
-      <div className="container">
-        <h2 className="title has-text-centered	">Projects</h2>
+      <div className="section" style={{"paddingTop":"0px"}}>
+        <h2 className="title has-text-centered">Projects</h2>
       </div>
-
-
         <div className="container grid is-col-min-12" >
           {
             PROJECTS_ARRAY.map((project, index) => {
@@ -44,10 +40,6 @@ export default function Index() {
             })
           }
         </div>
-
-
-
-
     </div>
 
   );

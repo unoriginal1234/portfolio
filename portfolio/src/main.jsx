@@ -11,6 +11,7 @@ import Contact from "./routes/contact";
 import Projects from "./routes/projects";
 import About from "./routes/about";
 import Index from "./routes/index";
+import Thanks from "./routes/thanks"
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />
+      },
+      {
+        path: "thanks",
+        element: <Thanks />
       }
     ]
   },

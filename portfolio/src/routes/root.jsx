@@ -1,11 +1,19 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
+import { useState } from "react"
 import Footer from "../components/footer"
 import Navigation from "../components/navigation"
 
 export default function Root() {
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const darkHandler = () => {
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div >
-      <Navigation />
+    <div  data-theme={darkMode? "dark" : ""}>
+      <Navigation darkHandler={darkHandler}/>
       <Outlet/>
       <ScrollRestoration />
       <Footer />

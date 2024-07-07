@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useNavigate } from "react-router-dom";
 
 export default function ContactForm () {
+
+  const navigate = useNavigate();
 
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
@@ -18,7 +21,7 @@ export default function ContactForm () {
 
     event.preventDefault()
 
-    if (name.length === 0 || email.length === 0 || !email.includes('@') || message.length < 4) {
+    if (name.length === 0 || email.length === 0 || !email.includes('@') || message.length < 3) {
       setIsWarning(true)
       return
     }
@@ -29,11 +32,11 @@ export default function ContactForm () {
       'user_name': name,
       'user_email': email,
       'message': message})
-
       .then((response) => {
-        alert('Thank you for your message ' + name + '!')
+        //alert('Thank you for your message ' + name + '!')
         console.log('SUCCESS!', response.status, response.text);
         setIsLoading(false)
+        navigate("/thanks");
       })
       .catch((error) =>{
         console.log('Sorry that came back with an error. ', error)
@@ -48,14 +51,14 @@ export default function ContactForm () {
     </section>
     <form >
 
-        <div className="control" style={{"maxWidth" : "480px"}}>
+        <div className="control" style={{"maxWidth" : "360px"}}>
             <label className="label">Name:</label>
             <input className="input is-rounded" name="name" placeholder="Eric" value={name}
             onChange={(e)=> setName(e.target.value)}/>
             { isWarning && name.length === 0 ? <p className="help is-danger">Name is required</p> : ''}
         </div>
 
-        <div className="control" style={{"maxWidth" : "480px"}}>
+        <div className="control" style={{"maxWidth" : "360px"}}>
             <label className="label">Email:</label>
             <input className="input is-rounded" name="email" placeholder="eric@email.com" type="email" value={email}
             onChange={(e)=> setEmail(e.target.value)}/>

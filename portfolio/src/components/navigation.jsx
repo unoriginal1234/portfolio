@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavbarRoutes from './navbarRoutes'
+import NavbarRoutes from './navbarRoutes';
+import DarkModeAnimation from '../content/darkModeAnimation'
 
-export default function Navigation() {
+
+export default function Navigation({darkHandler}) {
   const [isActive, setIsActive] = useState(false);
 
   const handleBurgerClick = () => {
@@ -11,12 +13,14 @@ export default function Navigation() {
 
   return (
     <div>
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav className="navbar has-shadow" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             Eric T. Roth - Software Engineer
           </Link>
-
+          <div className="navbar-item" onClick={darkHandler}>
+            <DarkModeAnimation />
+          </div>
           <a
             role="button"
             className={`navbar-burger ${isActive ? 'is-active' : ''}`}
@@ -31,6 +35,7 @@ export default function Navigation() {
             <span aria-hidden="true"></span>
           </a>
         </div>
+
 
         <div id="navbarBasicExample" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start">

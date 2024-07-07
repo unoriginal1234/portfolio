@@ -2,6 +2,7 @@ import { useSpring, animated } from '@react-spring/web'
 
 export default function LandingPage() {
   const props = useSpring({
+    config: {duration: 750},
     from: { opacity: 0,
       x: '-10%'
     },
@@ -13,7 +14,7 @@ export default function LandingPage() {
     <animated.div style={props}>
       <div className="grid">
         <div className="cell title has-text-centered">
-          Eric Roth
+          Eric T. Roth
         </div>
         <div className="cell"></div>
       </div>
