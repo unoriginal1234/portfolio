@@ -12,7 +12,7 @@ export default function Root() {
   }
 
   return (
-    <div  data-theme={darkMode? "dark" : ""}>
+    <div  data-theme={darkMode? "dark" : "light"}>
       <Navigation darkHandler={darkHandler}/>
       <Outlet/>
       <ScrollRestoration />

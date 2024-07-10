@@ -1,4 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
+import Socials from './socials'
 
 export default function LandingPage() {
   const props = useSpring({
@@ -15,9 +16,11 @@ export default function LandingPage() {
       <div className="grid">
         <div className="cell title has-text-centered">
           Eric T. Roth
-
         </div>
-        <div className="cell"></div>
+
+        <div className="cell">
+        <Socials />
+        </div>
       </div>
     </animated.div>
     </div>

@@ -5,6 +5,8 @@ import HeadshotCard from '../components/headshotCard'
 import ProjectCard from '../components/projectCard'
 import LandingPage from '../components/landingPage'
 import Skills from '../components/skills'
+import Socials from '../components/socials'
+import Blurb from '../components/blurb'
 
 export default function Index() {
 
@@ -19,7 +21,8 @@ export default function Index() {
         </div>
 
         <div className="section">
-          <ContactForm />
+
+          <Blurb />
           <div className="section">
             <Skills />
           </div>
