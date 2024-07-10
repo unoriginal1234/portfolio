@@ -1,7 +1,7 @@
 const PROJECTS_ARRAY = [
   {
     title: 'Headliners',
-    description: "Daily music trivia game using Spotify's API",
+    description: "Daily music trivia game using Spotify's API where contestants try to guess a headlining act given only the openers and venue",
     image: 'images/Headliner.png',
     gif: 'gifs/Headliners.gif',
     url: 'https://www.playheadliners.com'

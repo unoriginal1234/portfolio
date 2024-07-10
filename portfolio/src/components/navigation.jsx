@@ -18,9 +18,10 @@ export default function Navigation({darkHandler}) {
           <Link className="navbar-item" to="/">
             Eric T. Roth - Software Engineer
           </Link>
-          <div className="navbar-item" onClick={darkHandler}>
-            <DarkModeAnimation />
+          <div className="navbar-item">
+            <DarkModeAnimation darkHandler={darkHandler}/>
           </div>
+
           <a
             role="button"
             className={`navbar-burger ${isActive ? 'is-active' : ''}`}
@@ -39,6 +40,7 @@ export default function Navigation({darkHandler}) {
 
         <div id="navbarBasicExample" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start">
+
             <Link to="projects" className="navbar-item">
               Projects
             </Link>

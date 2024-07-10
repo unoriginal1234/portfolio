@@ -15,6 +15,7 @@ export default function LandingPage() {
       <div className="grid">
         <div className="cell title has-text-centered">
           Eric T. Roth
+
         </div>
         <div className="cell"></div>
       </div>

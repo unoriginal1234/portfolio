@@ -6,8 +6,7 @@ export default function About() {
   return (
     <>
     <div className="grid is-col-min-12">
-      <AboutAnimation />
-
+        <AboutAnimation />
       <div className="container section">
         <div className="box">
         {ABOUT_ARRAY.map((paragraph, index) => {

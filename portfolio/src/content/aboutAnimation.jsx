@@ -19,8 +19,8 @@ const Trail = ({ open, children }) => {
   });
   return (
     <div>
-      {trail.map(({ height, ...style }, index) => (
-        <a.div key={index} style={style}>
+      {trail.map(({ height }, index) => (
+        <a.div key={index} >
           <a.div style={{ height }}>{items[index]}</a.div>
         </a.div>
       ))}
@@ -32,14 +32,13 @@ export default function AboutAnimation() {
   const [open, set] = useState(true);
   return (
     <div className="section">
-      <div className={animationContainer, 'is-size-1 has-text-centered is-italic has-text-weight-bold'}
+      <div className={animationContainer, 'is-size-1 has-text-centered'}
       // onClick={() => set(state => !state)}
       >
       <Trail open={open}>
-        <span>A bit</span>
-        <span>About</span>
-        <span>Me</span>
-
+        <span>Open</span>
+        <span>To</span>
+        <span>Work</span>
       </Trail>
     </div>
     </div>
