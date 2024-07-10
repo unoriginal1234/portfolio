@@ -51,24 +51,30 @@ export default function ContactForm () {
     </section>
     <form >
 
-        <div className="control" style={{"maxWidth" : "360px"}}>
-            <label className="label">Name:</label>
+      <div className="field">
+      <label className="label">Name:</label>
+      <div className="control" style={{"maxWidth" : "360px"}}>
             <input className="input is-rounded" name="name" placeholder="Eric" value={name}
             onChange={(e)=> setName(e.target.value)}/>
             { isWarning && name.length === 0 ? <p className="help is-danger">Name is required</p> : ''}
         </div>
+      </div>
 
-        <div className="control" style={{"maxWidth" : "360px"}}>
-            <label className="label">Email:</label>
+
+    <div className="field">
+      <label className="label">Email:</label>
+      <div className="control" style={{"maxWidth" : "360px"}}>
             <input className="input is-rounded" name="email" placeholder="eric@email.com" type="email" value={email}
             onChange={(e)=> setEmail(e.target.value)}/>
             { isWarning && (email.length === 0 || !email.includes('@')) ? <p className="help is-danger">Email is required</p> : ''}
         </div>
+    </div>
+
 
 
       <div className="field">
+      <label className="label">Message:</label>
         <div className="control">
-            <label className="label">Message:</label>
             <textarea className="textarea" name="message" placeholder="I love your website!" value={message}
             onChange={(e)=> setMessage(e.target.value)}/>
             { isWarning && message.length < 3 ? <p className="help is-danger">Include a message longer than 3 characters please!</p> : ''}
