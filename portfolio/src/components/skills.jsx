@@ -3,7 +3,7 @@ import skills from '../content/skillList'
 
 export default function Skills () {
 
-  return <div className="grid is-col-min-3">
+  return <div className="grid is-col-min-1">
 
       {skills.map((language, index) => {
         return <SkillIcon key={index} language={language} index={index}/>

@@ -5,21 +5,21 @@ const PROJECTS_ARRAY = [
     image: 'images/Headliner.png',
     gif: 'gifs/Headliners.gif',
     url: 'https://www.playheadliners.com',
-    icons: ['react', 'express', 'css', 'postgres']
+    icons: ['react', 'express', 'css', 'postgres', 'cloudflare']
   },
   {
     title: 'Manor Match',
     description: 'A web-based service that connects homeowners with professionals for upscale home management and maintenance',
     image: 'images/ManorMatch.png',
     gif: 'gifs/ManorMatch.gif',
-    icons: ['react', 'express', 'tailwind', 'mongodb']
+    icons: ['react', 'express', 'tailwind', 'mongodb', 'aws']
   },
   {
     title: 'Atelier',
     description: 'Gorgeous, easy-to-use, e-commerce site for customers to make informed purchasing decisions',
     image: 'images/ProjectAtelier.png',
     gif: 'gifs/Atelier.gif',
-    icons: ['react', 'express', 'css', 'postgres']
+    icons: ['react', 'express', 'css', 'postgres', 'aws']
 
   },
 

@@ -12,18 +12,20 @@ export default function Index() {
 
     <div>
       <div className="container grid is-col-min-12" >
-        <div className="section">
+        <div className="section pb-0">
           <LandingPage />
         </div>
 
-        <div className="section">
+        <div className="section pb-0">
           <div className="box">
             <Blurb />
-            <div className="section">
-              <Skills />
-            </div>
+
           </div>
         </div>
+      </div>
+
+      <div className="section pt-0">
+              <Skills />
       </div>
 
       <div className="section" style={{"paddingTop":"0px"}}>
