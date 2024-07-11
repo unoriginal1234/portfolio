@@ -4,6 +4,8 @@ import ProjectCard from '../components/projectCard'
 import LandingPage from '../components/landingPage'
 import Skills from '../components/skills'
 import Blurb from '../components/blurb'
+import HeadshotCard from '../components/headshotCard'
+import FrontPageAnimation from '../content/frontPageAnimation'
 
 export default function Index() {
 
@@ -14,18 +16,21 @@ export default function Index() {
       <div className="container grid is-col-min-12" >
         <div className="section pb-0">
           <LandingPage />
-        </div>
 
-        <div className="section pb-0">
-          <div className="box">
-            <Blurb />
+          <div className="columns">
+            <HeadshotCard />
+            <div >
+              <Blurb />
+            <div className="section pt-3">
+              <Skills />
+              <FrontPageAnimation text={'Hello World!'}/>
+              <FrontPageAnimation text={'Welcome to my page!'}/>
+            </div>
+
+            </div>
 
           </div>
         </div>
-      </div>
-
-      <div className="section pt-0">
-              <Skills />
       </div>
 
       <div className="section" style={{"paddingTop":"0px"}}>
@@ -43,6 +48,8 @@ export default function Index() {
           }
         </div>
     </div>
+
+
 
   );
 }

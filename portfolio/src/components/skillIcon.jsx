@@ -3,7 +3,7 @@ import { useSpring, animated } from '@react-spring/web'
 
 
 
-export default function SkillIcon({language, index}) {
+export default function SkillIcon({language, index, size}) {
 
   const props = useSpring({
     config: {duration: 2000},
@@ -12,7 +12,7 @@ export default function SkillIcon({language, index}) {
   })
 
   return <>
-    <span className="cell icon is-large">
+    <span className={`cell icon is-${size}`}>
       <animated.div style={props}>
 
       <img src={`https://skillicons.dev/icons?i=${language}`}></img>

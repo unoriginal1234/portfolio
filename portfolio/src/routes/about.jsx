@@ -6,7 +6,9 @@ export default function About() {
   return (
     <>
     <div className="grid is-col-min-12">
+      <div className="container">
         <AboutAnimation />
+      </div>
       <div className="container section">
         <div className="box">
         {ABOUT_ARRAY.map((paragraph, index) => {
@@ -19,10 +21,8 @@ export default function About() {
               )
           }
         })}
-
         </div>
       </div>
-
     </div>
     </>
   )

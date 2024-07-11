@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTrail, a } from '@react-spring/web';
+import SkillMessage from '../components/skillMessage'
 
 const animationContainer = {
   'display': 'flex',
@@ -14,14 +15,14 @@ const Trail = ({ open, children }) => {
     config: { mass: 5, tension: 2000, friction: 200 },
     opacity: open ? 1 : 0,
     x: open ? 0 : 20,
-    height: open ? 110 : 0,
+    height: open ? 130 : 0,
     from: { opacity: 0, x: 20, height: 0 },
   });
   return (
     <div>
       {trail.map(({ height }, index) => (
         <a.div key={index} >
-          <a.div style={{ height }}>{items[index]}</a.div>
+          <a.div style={{height}} >{items[index]}</a.div>
         </a.div>
       ))}
     </div>
@@ -31,16 +32,14 @@ const Trail = ({ open, children }) => {
 export default function AboutAnimation() {
   const [open, set] = useState(true);
   return (
-    <div className="section">
-      <div className={animationContainer, 'is-size-1 has-text-centered'}
+      <div
       // onClick={() => set(state => !state)}
       >
       <Trail open={open}>
-        <span>Open</span>
-        <span>To</span>
-        <span>Work</span>
+        <div className="section"><SkillMessage discipline={'Frontend:'} skills={['css', 'react', 'tailwind', 'html', 'jquery', 'bootstrap']}/></div>
+        <div className="section"><SkillMessage discipline={'Backend:'} skills={['py', 'express', 'c', 'mongodb', 'postgres', 'nginx', 'nodejs', 'mysql']}/></div>
+        <div className="section"><SkillMessage discipline={'Tools & Concepts:'} skills={['git', 'jest', 'vite', 'aws', 'webpack', 'cloudflare']}/></div>
       </Trail>
-    </div>
     </div>
 
   );

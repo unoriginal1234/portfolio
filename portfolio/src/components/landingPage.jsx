@@ -1,6 +1,5 @@
 import { useSpring, animated } from '@react-spring/web'
 import Socials from './socials'
-import HeadshotCard from './headshotCard'
 
 export default function LandingPage() {
   const props = useSpring({
@@ -29,7 +28,7 @@ export default function LandingPage() {
       </animated.div>
 
     </div>
-    <HeadshotCard />
+
     </div>
 
 }
