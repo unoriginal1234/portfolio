@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useNavigate } from "react-router-dom";
+import Socials from '../components/socials'
 
 export default function ContactForm () {
 
@@ -48,7 +49,9 @@ export default function ContactForm () {
     <>
     <section className="title">
       Say hello
+      <Socials />
     </section>
+
     <form >
 
       <div className="field">

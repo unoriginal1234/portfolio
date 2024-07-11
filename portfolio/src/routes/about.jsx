@@ -12,7 +12,7 @@ export default function About() {
         {ABOUT_ARRAY.map((paragraph, index) => {
           if (index > 0) {
             return (<div className="content" key={index}>
-              <p >
+              <p className="is-size-6">
                 {paragraph}
               </p>
             </div>
