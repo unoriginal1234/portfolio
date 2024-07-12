@@ -1,4 +1,3 @@
-import headshot from '../content/headshot.jpg';
 import ABOUT_ARRAY from '../content/about';
 import { Link } from 'react-router-dom'
 
@@ -9,7 +8,7 @@ export default function ProjectCard () {
         <div className="card-image">
           <figure className="image is-2by3" >
             <img
-              src={headshot}
+              src="images/headshot.jpg"
               alt="Image of a handsome Software Engineer"
             />
           </figure>
