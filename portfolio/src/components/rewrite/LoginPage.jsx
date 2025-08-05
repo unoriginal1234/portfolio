@@ -1,7 +1,9 @@
 import { useState } from 'react';
-let thepassword = import.meta.env.REWRITE_PASSWORD
 
-const LoginPage = () => {
+
+const LoginPage = ({onLogin}) => {
+    const thepassword = import.meta.env.VITE_REWRITE_PASSWORD
+
     const [formData, setFormData] = useState({
         password: ''
     });
@@ -17,12 +19,13 @@ const LoginPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle login logic here
+        console.log(formData.password)
         if (formData.password !== thepassword) {
             alert('Incorrect password. Please try again.');
             return;
         }
         // Proceed with login
-        alert('Login successful!');
+        onLogin(true);
         // Redirect or perform other actions
     };
 
