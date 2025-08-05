@@ -11,7 +11,8 @@ import Contact from "./routes/contact";
 import Projects from "./routes/projects";
 import About from "./routes/about";
 import Index from "./routes/index";
-import Thanks from "./routes/thanks"
+import Thanks from "./routes/thanks";
+import Rewrite from "./routes/rewrite";
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "thanks",
         element: <Thanks />
+      },
+      {
+        path: "rewrite",
+        element: <Rewrite />
       }
     ]
   },
